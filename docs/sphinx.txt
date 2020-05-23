@@ -1,0 +1,1 @@
+sphinx-apidoc -o . ../interfacebuilder ../*test* ../interfacebuilder/*misc* ../interfacebuilder/*backend* ../*setup* ../*CMake* *sphinx* ../interfacebuilder/*init* -f
