@@ -24,7 +24,7 @@ pip install 2D-interface-builder.zip
 
 ## Documentation
 
-Documentation will be up soon.
+Documentation is available at [ReadTheDocs](https://2d-interface-builder.readthedocs.io/en/latest/).
 
 ## Requirements
 
