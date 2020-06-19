@@ -22,6 +22,10 @@ Then, download or clone the .zip from here and run:
 pip install 2D-interface-builder.zip
 ```
 
+## Documentation
+
+Documentation is available at [ReadTheDocs](https://2d-interface-builder.readthedocs.io/en/latest/).
+
 ## Testing
 
 Tests can be run in the project directory with
