@@ -11,6 +11,7 @@
    :caption: Introduction:   
 
    intro
+   algorithm
    building_interfaces
 
 .. toctree::

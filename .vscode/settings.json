@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/roman/miniconda3/envs/develop/bin/python",
+    "python.pythonPath": "/home/romankempt/miniconda3/envs/develop/bin/python",
     "files.associations": {
         "array": "cpp",
         "atomic": "cpp",
@@ -50,6 +50,13 @@
         "utility": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
-    }
+        "valarray": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory_resource": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "variant": "cpp"
+    },
+    "cmake.configureOnOpen": false
 }

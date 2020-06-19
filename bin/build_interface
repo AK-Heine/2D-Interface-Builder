@@ -28,7 +28,7 @@ def parseArguments():
         default=(0, 180.0),
     )
     parser.add_argument(
-        "-c", "--crit", help="Acceptance criterion", type=float, default=0.1
+        "-t", "--tolerance", help="Acceptance criterion", type=float, default=0.1
     )
     parser.add_argument(
         "-d", "--distance", help="Interlayer distance", type=float, default=4.0
@@ -37,13 +37,19 @@ def parseArguments():
         "-w", "--weight", help="Weight to reconstruct stack", type=float, default=0.5
     )
     parser.add_argument(
-        "--prec",
-        help="Precision to determine equivalent structures",
-        type=float,
-        default=1e-4,
+        "--jitter", help="Jitters points for plotting", type=float, default=0.05
     )
     parser.add_argument(
-        "--jitter", help="Jitters points for plotting", type=float, default=0.05
+        "--mingamma",
+        help="Exclude structures with gamma angles smaller than this value",
+        type=float,
+        default=20,
+    )
+    parser.add_argument(
+        "--maxgamma",
+        help="Exclude structures with gamma angles larger than this value",
+        type=float,
+        default=160,
     )
 
     # Parse arguments
@@ -54,9 +60,9 @@ def parseArguments():
 if __name__ == "__main__":
     args = parseArguments()
     intf = interface(**vars(args))
-    if intf.results != None:
+    if intf.pairs != None:
         assert (
             len(intf.pairs) != 0
         ), "Couldn't construct any linearly independent pairs."
-        intf.analyze_results(args.distance, args.weight, args.prec)
+        intf.analyze_results(args.distance, args.weight)
         intf.plot_results(args.jitter)
