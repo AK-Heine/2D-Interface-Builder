@@ -13,14 +13,11 @@ from setuptools.command.build_ext import build_ext
 
 import re
 
-VERSIONFILE = "interfacebuilder/__init__.py"
-verstrline = open(VERSIONFILE, "rt").read()
-VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
-mo = re.search(VSRE, verstrline, re.M)
-if mo:
-    version = mo.group(1)
-else:
-    raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE,))
+version = 0.0
+
+raise Exception(
+    "This repository is deprecated. Please go to https://github.com/romankempt/hetbuilder instead."
+)
 
 
 class CMakeBuild(build_ext):
